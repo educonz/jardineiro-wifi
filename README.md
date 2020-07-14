@@ -1,6 +1,6 @@
 # Jardineiro WiFi IoT
 
-[![Build Status](https://travis-ci.org/educonz/doubleshot.svg?branch=master)](https://travis-ci.org/educonz/doubleshot)
+[![Build Status](https://travis-ci.org/educonz/jardineiro-wifi-iot.svg?branch=master)](https://travis-ci.org/educonz/jardineiro-wifi-iot)
 
 ### Configuração
 
