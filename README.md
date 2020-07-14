@@ -4,14 +4,16 @@
 
 ### Configuração
 
-Alterar token para integrar com [S.IoT](https://www.konztec.com).
-
-```sh
-const String TOKEN = "";
-```
-
 Alterar nome e senha WiFI.
 
 ```sh
-AutoConnectConfig Config("JardimWiFi", "12345");
+const char *ssid = "YOUR_WIFI";
+const char *password = "YOUR_PASS";
+```
+
+Alterar token para integrar com [S.IoT](https://www.konztec.com).
+
+```sh
+const char *token = "";
+const char *endPointSiot = "https://test.ws.siot.com/api/v1";
 ```

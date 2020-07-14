@@ -7,11 +7,15 @@
 #define PIN_RELE D5
 #define PIN_SENSOR_SOLO A0
 
-const String TOKEN = "";
+const char *ssid = "YOUR_WIFI";
+const char *password = "YOUR_PASS";
+
+const char *token = "";
+const char *endPointSiot = "https://test.ws.siot.com/api/v1";
 
 ESP8266WebServer Server;
 AutoConnect Portal(Server);
-AutoConnectConfig Config("JardimWiFi", "12345");
+AutoConnectConfig Config(ssid, password);
 
 String header;
 bool ativo = false;
@@ -79,9 +83,9 @@ void EnviarHttp(String pathUri, String body)
 {
     HTTPClient http;
 
-    http.begin("https://siot.ws.konztec.com/api/v1" + pathUri);
+    http.begin(endPointSiot + pathUri);
     http.addHeader("Content-Type", "application/json");
-    http.addHeader("key-token", TOKEN);
+    http.addHeader("key-token", token);
     int httpResponseCode = http.POST(body);
     if (httpResponseCode > 0)
     {
